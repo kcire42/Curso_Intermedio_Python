@@ -15,7 +15,7 @@ def main():
     numeros = [1,2,3,4,5,6,7,8,9,10]
     pares = [i for i in numeros if i % 2 == 0 ]
     print(pares)
-    elevados_doble = [i for i in pares i*2 ]
+    elevados_doble = [i for i in pares]
     print(elevados_doble)
 
 
