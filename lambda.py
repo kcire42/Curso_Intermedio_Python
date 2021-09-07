@@ -48,3 +48,11 @@ print(dobles_for)
 #doblar numeros en una lista con map
 cuadrados = list(map(lambda x: x**2,numeros))
 print(cuadrados)
+
+#FUNCION REDUCE 
+#SE UTILIZA CUNADO QUIERO REDUCIR LOS TERMINO DE UNA LISTA
+from functools import reduce
+dos = [2,2,2]
+multiplicar = reduce(lambda a,b : a*b , dos)
+print(multiplicar)
+
