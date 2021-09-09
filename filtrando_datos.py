@@ -57,7 +57,7 @@ DATA = [
     },
     {
         'name': 'Pablo',
-        'age': 32,
+        'age': 90,
         'organization': 'Master',
         'position': 'Human Resources Manager',
         'language': 'python',
@@ -73,11 +73,23 @@ DATA = [
 def main():
     all_python_devs = [worker["name"] for worker in DATA if worker["language"] == "python" ]
     print(all_python_devs)
+    all_python_devs_filter = list(filter(lambda worker: worker["language"] == "python",DATA))
+    all_python_devs_filter_map = list(map(lambda worker: worker["name"],all_python_devs_filter))
+    print(all_python_devs_filter_map)
     all_platzi_workers = [worker["name"] for worker in DATA if worker["organization"] == "Platzi"]
     print(all_platzi_workers)
     adultos_list = [worker["name"] for worker in DATA if worker["age"] >= 18]
     print(adultos_list)
-    adultos_filter = list(filter(lambda))
+    adultos_filter = list(filter(lambda worker: worker["age"] >= 18, DATA))
+    #print(adultos_filter)
+    adultos_map = list(map(lambda worker: worker["name"], adultos_filter))
+    print(adultos_map)
+    #SUMAR DICCIONARIOS SE USA EL SIMBOLO |
+    old_people = list(map(lambda worker: worker | {"old": worker["age"] > 70}, DATA))
+
+    print(old_people)
+
+
 
 
 if __name__ == "__main__":
