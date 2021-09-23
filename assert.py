@@ -3,7 +3,7 @@ def main():
     assert  numero.isnumeric(), "Solo puedo agregar numeros"
     
     if int(numero) < 0:
-        assert unumero > 0, "no se pueden colocar numeros negativos"
+        assert numero > 0, "no se pueden colocar numeros negativos"
     else:
         print(f"el numero es correcto: {numero}")
             
